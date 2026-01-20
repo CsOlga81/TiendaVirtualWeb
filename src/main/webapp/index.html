@@ -5,16 +5,20 @@
         <meta charset=UTF-8">
     </head>
     <body>
-        <h1>Registro de Producto</h1>
+        <h1>Registro del Cliente</h1>
         
-        <form action="ProductoServlet" method="post">
-            <label>Nombre del producto:</label><br>
-            <input type="text" name="nombre"><br><br>
+        <form action="ClienteServlet" method="post" accept-charset="UTF-8">
             
-            <label>Precio:</label><br>
-            <input type="number" name="precio"><br><br>
+            <label>Nombre:</label><br>
+            <input type="text" name="nombre" placeholder = "Nombre" required=""><br><br> 
             
-            <input type="submit" value="Guardar">
+            <label>Correo:</label><br>
+            <input type="email" name="correo" placeholder="Correo" required=""><br><br>
+            
+            <label>Telefono:</label><br>
+            <input type="text" name="telefono" placeholder="Telefono" required=""><br><br>
+            
+            <input type="submit" value="Registrar">
         </form>
     </body>
 </html>
