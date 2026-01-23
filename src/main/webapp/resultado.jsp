@@ -9,10 +9,13 @@
 <html>
     <head>
         <meta charset=UTF-8">
-        <title>Resultado</title>
+        <title>Resultado del Registro Cliente</title>
     </head>
     <body>
-        <h1>Página JSP funcionando</h1>
-        <p>Si ves el mensaje, el JSP está bien creado.</p>
-    </body>
+        <h2>Datos del cliente recibidos</h2>
+        
+        <p><strong>Nombre:</strong> <%= request.getAttribute("nombre") %></p>
+        <p><strong>Correo:</strong> <%= request.getAttribute("correo") %></p>
+        <p><strong>Teléfono:</strong> <%= request.getAttribute("telefono") %></p>
+</body>
 </html>
