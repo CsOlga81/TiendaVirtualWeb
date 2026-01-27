@@ -1,0 +1,32 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 26/01/2026, 7:15:38 p. m.
+    Author     : angel
+*/
+
+.contenedor-formulario {
+    width: 400px;
+    margin: 50px auto;   /*para centrar el bloque*/
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;   
+}
+
+form{
+    text-align: left;   /*para arreglar los label con el contenido en alineado normal*/
+}
+
+label{
+   display: block;
+   margin-bottom: 4px;
+   font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+}
