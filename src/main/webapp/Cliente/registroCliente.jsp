@@ -16,7 +16,7 @@
     <div class="contenedor-formulario">
         <h2>Registro de Clientes</h2>
         
-        <form>
+        <form action="../RegistroClienteServlet" method="post">
             <label>Nombre completo: </label>
             <input type="text" name="nombre_completo"><br><br>
             
@@ -24,7 +24,7 @@
             <input type="email" name="correo_electronico"><br><br>
             
             <label>Contraseña:</label>
-            <input type="password" name="contraseña"><br><br>
+            <input type="password" name="contrasena"><br><br>
             
             <label>Dirección:</label>
             <input type="text" name="direccion"><br><br>
