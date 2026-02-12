@@ -73,12 +73,25 @@ public class RegistroClienteServlet extends HttpServlet {
             throws ServletException, IOException {
         //processRequest(request, response);
 
+        //Aqui se reciben los datos del formulario:
         String nombreCompleto = request.getParameter("nombre_completo");
         String correo = request.getParameter("correo_electronico");
         String contrasena = request.getParameter("contrasena");
         String direccion = request.getParameter("direccion");
         String ciudad = request.getParameter("ciudad");
         String telefono = request.getParameter("telefono");
+        
+        //Pongo esta validación para que no ingrese datos si falta el nombreCompleto
+        if (nombreCompleto == null || nombreCompleto.trim().isEmpty() ||
+           correo == null || correo.trim().isEmpty() ||
+           contrasena == null || contrasena.trim().isEmpty() ||
+           direccion == null || direccion.trim().isEmpty() ||
+           ciudad == null || ciudad.trim().isEmpty() ||
+           telefono == null || telefono.trim().isEmpty()){
+           
+           response.getWriter().println("Todos los campos son obligatorios");
+           return; //para detener el registro y no guardar en la BD
+        }
 
         response.setContentType("text/html;charset=UTF-8");
         response.getWriter().println("Nombre recibido: " + nombreCompleto);
@@ -86,6 +99,10 @@ public class RegistroClienteServlet extends HttpServlet {
         response.getWriter().println("Correo recibido: " + correo);
         response.getWriter().println("<br>");
         response.getWriter().println("Dirección recibida: " + direccion);
+        response.getWriter().println("<br>");
+        response.getWriter().println("Ciudad recibida: " + ciudad);
+        response.getWriter().println("<br>");
+        response.getWriter().println("Teléfono recibido: " + telefono);
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -115,10 +132,14 @@ public class RegistroClienteServlet extends HttpServlet {
 
         } catch (Exception e) {
             e.printStackTrace();
-            response.getWriter().println("Error de conexión: " + e.getMessage());
+            
+            if (e.getMessage().contains("{Duplicate entry")) {
+                response.getWriter().println("<hr><p style='color:green; font-weigh:bold;'>El correo ya está registrado. Intente con otr correo.</p>");
+            } else {
+                response.getWriter().println("Error en la base de datos: " + e.getMessage());
+            }
         }
     }
-
     /**
      * Returns a short description of the servlet.
      *
@@ -128,5 +149,6 @@ public class RegistroClienteServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }
+
+

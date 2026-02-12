@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset=UTF-8">
+        <meta charset="UTF-8">
         <title>Resultado del Registro Cliente</title>
     </head>
     <body>

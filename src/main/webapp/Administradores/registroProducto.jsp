@@ -17,13 +17,13 @@
             <div class="contenedor-formulario">     
                 <form action="../RegistroProductoServlet" method="post">
             
-                    <label for="nombre">Nombre del Producto:</label><br>
+                    <label for="nombre">Nombre del Producto:</label>
                     <input type="text" id="nombre" name="nombre" required><br><br>
             
-                    <label for="descripcion">Descripción:</label><br>
+                    <label for="descripcion">Descripción:</label>
                     <textarea id="descripcion" name="descripcion" maxlength="255"></textarea><br><br>
             
-                    <label for="id_categoria">Categoría:</label>:<br>
+                    <label for="id_categoria">Categoría:</label>
                     <select name="id_categoria" required>
                         <option value="">Seleciones una opción</option>
                         <option value="1">Cuidado personal</option>
@@ -32,13 +32,13 @@
                         <option value="4">Joyas</option>
                     </select><br><br>
                     
-                    <label for="cantidad">Cantidad:</label><br>
+                    <label for="cantidad">Cantidad:</label>
                     <input type="number" id="cantidad" name="cantidad"><br><br>
                     
-                    <label for="precio">Precio:</label><br>
+                    <label for="precio">Precio:</label>
                     <input type="number" id="precio" name="precio" step="0.01" required><br><br>
                     
-                    <label for="genero">Genero:</label><br>
+                    <label for="genero">Genero:</label>
                     <select name="genero" required>
                         <option value="">Seleccione una opción</option>
                         <option value="Mujer">Mujer</option>

@@ -14,7 +14,7 @@
     </head>
     <body>
     <div class="contenedor-formulario">
-        <h2>Registro de Clientes</h2>
+        <h2>Registrese</h2>
         
         <form action="../RegistroClienteServlet" method="post">
             <label>Nombre completo: </label>

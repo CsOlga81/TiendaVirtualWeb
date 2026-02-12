@@ -8,11 +8,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 */
 
 .contenedor-formulario {
-    width: 400px;
+    width: 420px;       /*ancho del formulario*/
     margin: 50px auto;   /*para centrar el bloque*/
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;   
+    border-radius: 8px;
+    border-radius: 8px; 
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 form{
@@ -29,4 +31,8 @@ input {
     width: 100%;
     padding: 6px;
     margin-bottom: 10px;
+}
+
+.titulo {
+    text-align: center;
 }
